@@ -1,0 +1,9 @@
+<h1>View list</h1>
+<hr />
+{% for item in items %}
+<a href="{% url 'single' pk=item.pk %}"> {{item.img_name}}</a>
+<a href="{% url 'edit' pk=item.pk %}"> Edit</a>
+<a href="{% url 'delete' pk=item.pk %}"> Delete</a>
+<hr />
+{% endfor %}
+<!--  -->
